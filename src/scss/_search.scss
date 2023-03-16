@@ -1,0 +1,108 @@
+@use  "./help" as * ;
+.search{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 21px 17px 26px;
+  
+    .search-con div:nth-child(2){
+      margin-right: 162px;
+    }
+    .search-con > div:first-of-type{
+      margin-right: 111px;
+      width: 195px;
+    }
+    .search-con > div:last-child{
+     width: 315px;
+    }
+    .search-con{
+      display: flex;
+      border-top: 1px solid rgba(132, 139, 148,0.3) ;
+      padding-top: 6px;
+      h4{
+        color: $gray;
+        margin-bottom: 10px;
+        font-weight: 400;
+font-size: 14px;
+line-height: 19px
+      }
+    }
+    .search-header{
+      display: flex;
+      justify-content: space-between;
+    
+  
+     
+     &__title{
+      display: flex;
+      align-items: flex-start;
+      margin-top: 19px;
+      h3{
+        color: #0063C6;
+        border-bottom: 2px solid #0063C6 ;
+        padding-bottom: 20px;
+        font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  
+     
+      }  svg{
+        width: 10px;
+        height: 10px ;
+        transform: rotate(90deg);
+        margin-top: 5px;
+        margin-right: 11px;
+        
+      }
+     }
+      // &__inputs *:not(:last-child){
+      //   margin-right: 22px;
+      // }
+      &__inputs{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-top: 13px;
+
+       
+        .search-header__input{
+          display: flex;
+          color: #979797;
+          border: 1px solid #C6CDD3;
+          border-radius: 17px;
+          padding: 5px 16px;
+          margin-right: 21px;
+         
+         input{
+          width: 22.59vw;
+          border: none;
+          opacity: 40%;
+         }
+        
+  
+  
+        }
+       
+      }
+    }
+  }
+  .acc_search{
+    .search{
+      height: 60px;
+      padding: 0 26px;
+    }
+    .search-header{
+      height: 100%;
+      .search-header__title{
+        height: 100%;
+        align-items: flex-end;
+      }
+    }
+  
+  }
+  .main{
+    .search-header__title{
+      margin: 0;
+    }
+  }
