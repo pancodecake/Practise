@@ -411,7 +411,7 @@
   }
   body {
     
-
+ 
   
     line-height: 1.5;
     font-size: 0.875rem;
@@ -464,5 +464,8 @@ input{
     text-decoration: none!important;
   }
   * {
+    text-decoration: none!important;
+  }
+  p{
     text-decoration: none!important;
   }

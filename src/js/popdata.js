@@ -866,7 +866,36 @@ function btnEvent(e){
       
       
     }
-    else if(this.classList.contains('file')){
+    else if(this.classList.contains('file')){tableBtn
+        this.parentElement.append(titleFile)
+        this.classList.toggle('btn-active')
+        body.append(cover)
+        body.style.overflow = 'hidden'
+        if( this.classList.contains('btn-active')){
+            titleFile.style.visibility = 'visible'
+            cover.style.visibility = 'visible'
+        }
+        const xx = titleFile.querySelector('.btn__b')
+       
+        xx.addEventListener('click',function(){
+            titleFile.style.visibility = 'hidden'
+            cover.style.visibility = 'hidden'
+            body.style.overflow = 'unset'
+            
+      
+           
+        })
+        const X = titleFile.querySelector('.modal__close')
+        console.log(X)
+        X.addEventListener('click',function(){
+            titleFile.style.visibility = 'hidden'
+            cover.style.visibility = 'hidden'
+            body.style.overflow = 'unset'
+           
+        })
+      
+      
+    }    else if(this.classList.contains('tableBtn')){
         this.parentElement.append(titleFile)
         this.classList.toggle('btn-active')
         body.append(cover)
