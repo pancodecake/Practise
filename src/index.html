@@ -4,30 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=3, initial-scale=1.0">
-    <link rel="preload" href="fonts/open-sans/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/open-sans/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/open-sans/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230313201500"></script>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js?_v=20230313201500"></script>
     <script src="https://unpkg.com/just-validate-plugin-date@latest/dist/just-validate-plugin-date.production.min.js?_v=20230313201500"></script>
-    <link rel="stylesheet" href="css/popups.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="fonts/open-sans/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/open-sans/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/open-sans/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
     <script src="scripts/script.js" defer></script>
 
     <script src="scripts/popdata.js" defer></script>
      <script src="scripts/pop.js" defer></script>
-    
-    <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="main.css">
  
     <title>Popups</title>
 </head>
 <body>
 
-
-    <!--Редактировать проект-->
+    <div class="dlt-title popup Xbtn">
+    
+        <button class="modal__close" type="button" data-close>
+            <img src="img/Icon-cross.svg" alt="">
+        </button>
+        
+        
+        <div class="modall-chapter__content">
+            <div class="modal-chapter__header">
+                <div class="modal-add__title modal-add__title--bg">Вы уверены, что хотите удалить раздел?</div>
+            </div>
+        
+            <div class="btn">
+                <button class="btn__a btn__a--ma" type="submit">Подтвердить</button>
+                <button class="btn__b btn__b--mb" type="submit" data-close>Отменить</button>
+            </div>
+        </div>
+        </div>
+        <div class="modal-title popup Xbtn">
+    
+            <button class="modal__close" type="button" data-close>
+                <img src="img/icon-cross.svg" alt="">
+            </button>
+        
+            <div class="modal-add">
+        
+                <div class="modall-add__content">
+                    <div class="modal-add__header">
+                        <div class="modal-add__title">Добавить проект</div>
+                    </div>
+        
+                    <form class="form" action="/" method="post" id="form-add">
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                            <input class="form__input" name="name" type="text" id="name1">
+                        </div>
+        
+                        <div class="form__group">
+                            <div class="label__counter">
+                                <div class="form__label-word">
+                                    <label class="form__label" for="input-name">Описание</label>
+                                </div>
+                                <span class="counter" id="char_count1">0/100</span>
+                            </div>
+                            <textarea class="form__textarea" name="input-text" id="textbox1" maxlength="100"></textarea>
+                        </div>
+        
+        
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Пригласить</label>
+                            <div class="select__wrapper">
+                                <select class="form__select" name="select-name">
+                                    <option>+ Добавить сотрудника</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        
+                        <div class="form__group">
+                            <div class="upload-container">
+                                <img src="img/Vector.svg" alt="">
+                                <div class="upload__item">
+                                    <input class="file-input" type="file" name="file" multiple>
+                                    <label class="file-label" for="file-input">Вы можете просто перетащить файл сюда</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="line"></div>
+        
+                        <div class="btn">
+                            <button class="btn__a" type="submit">Добавить</button>
+                            <button class="btn__b" type="submit" data-close>Отменить</button>
+                        </div>
+                    </form>
+                </div>
+        
+        
+            </div>
+        
+        </div>
    
-        <!-- ./ modal__add-->
-    </div>
+   
+        <!--pop ups-->
+    
     <main>
         <div class="container">
            

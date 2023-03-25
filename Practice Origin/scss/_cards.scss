@@ -1,0 +1,72 @@
+@use  "./help" as * ;
+.card{
+
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    transition:  0.5s opacity ease-in, 0.5s height ease-in-out;
+    position: relative;
+    &-title{
+      display: flex;
+      flex-shrink: 0;
+      &__h3{
+        font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+margin-top:8px;
+margin-right: 15px;
+color: #525C69;
+      }
+      &__box{
+        width: 46px;
+        height: 46px;
+        background-color: #90BE00;
+        border-radius: 8px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-bottom: 6px;
+  
+      }
+      &__btn{
+        position: relative;
+        z-index: 100;
+      }
+    }
+    &-owner{
+      
+      h2{
+        color: $gray;
+        font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+      }
+      &__name{
+        color: $black;
+        font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+      }
+    }
+    &-date{
+      h2{
+        color: $gray;
+        font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+      }
+      &__time{
+        color: $black;
+        font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+      }
+    }
+  }
+  // .card-con{
+  //   position: relative;
+  //   .cardSettings{
+  //     position: absolute;
+  //   }
+  // }

@@ -43,7 +43,7 @@ const row = ` <div class="table-row"><div class='table-row__div'><span id="name"
   document.title === "History" ? "" : rowProps.date
 }</span>
 ${document.title === "History" ? "" : rowProps.svg}
-<div class=" cardSet side set">
+<div class=" popup table-popup side set">
 <ul class="menu">
     <li><div class="triangle"></div></li>
     <li><a href="#" class="side-link move "><img src="img/Icon.png" alt="img/icon-drag.svg">Переместить</a></li>
@@ -208,7 +208,7 @@ let cardPop = {
     
     
     </div>`,
-  move: `    <div class=" settings-drop side move set">
+  move: `    <div class=" settings-drop cardSide side move set">
             
     <ul class="menu">
         <li><div class="triangle"></div></li>
@@ -218,12 +218,32 @@ let cardPop = {
     
     </div>`,
 };
+
+
+
+//=======
+
+let lastClicked
+
 const menuMove = document.querySelector("#move");
 const menuTie = document.querySelector("#tie");
 const menuRedact = document.querySelector("#redact");
 const menuDlt = document.querySelector("#dlt");
-const pass = document.querySelectorAll(".pass");
+const popup = document.querySelectorAll(".popup");
+ const popSide = document.querySelectorAll(".popup-side");
+
 // let cover= document.querySelector('.coverCon')
+//Fucntion for all btns
+  // btns.forEach(btn => {
+  //  btn.addEventListener("click", function (e) {
+  //    popActive(e,this,btn,)
+
+
+  //  });
+  // })
+
+//=====================================================
+
 function open(targetItem) {
   setTimeout(() => {
     targetItem.style.visibility = "visible";
@@ -237,6 +257,52 @@ function close(targetItem) {
     targetItem.style.pointerEvents = "none";
   }, targetItem.animationDelay + 20);
 }
+
+function popActive(el,pthat,popBtns,popMenu){
+  el.preventDefault()
+  pthat.classList.add("btnMenu-active"); 
+
+  document.addEventListener("click", function (doc) {
+   console.log(!doc.target.closest('.popup'))
+     
+   if(popSide){//close one popside when other opened
+    popSide.forEach(sb => {
+      if(lastClicked !== undefined && lastClicked.classList.contains(sb.id) && lastClicked !== doc.target && !doc.target.closest('.popup-side') ){
+        lastClicked.classList.remove("btnMenu-active");
+       console.log(sb.id)
+        close(sb);
+        
+        console.log({last:lastClicked.classList,first:doc.target}) 
+     
+      
+       }
+   
+    
+   })
+
+   }
+
+    if (//click away popup dissapers
+      doc.target !==popBtns 
+    ) {
+      if(!doc.target.closest('.popup')){
+        console.log('not parent')
+        popBtns.classList.remove("btnMenu-active");
+
+        addingBtnMenu(el.target, popMenu);
+        popup.forEach(p => {
+          close(p);
+        })
+      }
+  
+  
+   
+    }
+    lastClicked = doc.target
+  });
+
+  addingBtnMenu(el.target, popMenu);
+}
 function addingBtnMenu(that, btnMenu) {
   if (that.classList.contains("btnMenu-active")) {
     open(btnMenu);
@@ -245,13 +311,13 @@ function addingBtnMenu(that, btnMenu) {
   }
 }
 function addingBtnMenuItems(that) {
-  console.log(that);
+  
   const elCord = that.getBoundingClientRect();
   const cords = {
     top: elCord.top + window.scrollY,
     left: elCord.left + window.scrollX,
-    width: elCord.width + 30,
-    height: elCord.height - 10,
+    width: elCord.width + 47,
+    height: elCord.height - 20,
   };
   if (that.classList.contains("move")) {
     menuMove.style.transform = `translate(${cords.left - cords.width}px,${
@@ -437,38 +503,17 @@ function loadContent() {
 
       tRows.forEach((tab) => {
         const tBtns = tab.querySelector(".tableBtn");
-        const tableMenu = tab.parentElement.querySelector(".cardSet");
-        const menuBtns = tableMenu.querySelectorAll(".side-link");
+        const tablePopup = tab.parentElement.querySelector(".popup");
+        const popSideBtns = tablePopup.querySelectorAll(".side-link");
 
-        menuBtns.forEach((mBtn) => {
+        popSideBtns.forEach((mBtn) => {
           mBtn.addEventListener("click", function (e) {
-            e.preventDefault;
+            e.preventDefault();
             addingBtnMenuItems(this);
           });
         });
         tBtns.addEventListener("click", function (e) {
-          this.classList.add("btnMenu-active");
-
-          document.addEventListener("click", function (doc) {
-            if (
-              doc.target !== tBtns &&
-              !doc.target.classList.contains("side-link")
-            ) {
-              tBtns.classList.remove("btnMenu-active");
-              menuBtns.forEach((mBtn) => {
-                mBtn.classList.remove("btnMenu-active");
-              });
-             
-              addingBtnMenu(e.target, tableMenu);
-              pass.forEach(p => {
-                close(p);
-              })
-          
-              console.log(doc.target);
-            }
-          });
-
-          addingBtnMenu(e.target, tableMenu);
+          popActive(e,this,tBtns,tablePopup)
 
      
         });
@@ -506,6 +551,9 @@ function loadContent() {
   }
 }
 
+
 window.addEventListener("DOMContentLoaded", loadContent);
 window.addEventListener("resize", addingTableHeight);
 window.addEventListener("resize", addingCardHeight);
+
+

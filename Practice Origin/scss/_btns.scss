@@ -1,0 +1,247 @@
+@use  "./help" as * ;
+.arrange{
+    z-index: 100;
+    position: absolute;
+    right: 126px;
+    top: 1px;
+    width: 158px;
+  
+    .triangle{
+        top: 9px ;
+        left: 149px ;
+        transform: rotate(90deg);
+    }
+}
+.invite{
+    h3{
+        margin: 0;
+    }
+}
+.modal__close{
+
+}
+.modal-share{
+    z-index: 100;
+    max-width: 287px;
+    position: absolute;
+    top: 10% ;
+    left: 35% ;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 150vh;
+    background-color:black;
+    opacity: 0.2;
+    top: 1px;
+}
+.modal-title{
+    z-index: 100;
+    position: absolute;
+    top: 10% ;
+    left: 30% ;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+    .form__group {
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+      }
+}
+.dlt-title{
+    position: absolute;
+    top: 10% ;
+    left: 30% ;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100; 
+}
+.file{
+    margin-left: 15px;
+}
+.invite{
+    top: 106%;
+    right: -16px;
+    z-index: 100;
+    .modal__add{
+        position: relative;
+    }
+    .triangle{
+top:-5px;
+right:20px;
+    }
+}
+.title-password{
+    position: absolute;
+    top: 10% ;
+    left: 30% ;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100; 
+  
+    .form__group{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+    }
+}
+.search-header__history{
+    margin-right: 21px;
+}
+.history-password{
+    position: absolute;
+    top: -1% ;
+    left: -78% ;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+    .form__group{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+    }
+}
+.table{
+    .popup{
+        position: absolute;
+        right: 0px;
+        top: 35px;
+        z-index: 100;
+        .triangle{
+            top: -11px;
+            right: 5px;
+                }
+    }
+}
+
+.redact-pop{
+    position: absolute;
+    top: 10%;
+    left: 30vw;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100; 
+    max-width: 540px;
+    .form__group{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+    }
+    
+}
+.dlt-title {
+    position: absolute;
+    top: 10%;
+    left: 30vw;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+  .settings-drop{
+    position: absolute;
+    left: 129px;
+    top: -4px;
+    z-index: 100;
+    .side-link{
+        width: 140px;
+    }
+    .triangle{
+        top: 8px!important;
+        left: 100%!important;
+        transform: rotate(90deg)!important;
+    }
+  }
+  .table-password{
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10px;
+    top: 10%;
+    left: 30vw;
+    
+  }
+  .table{
+    #move{
+        top:10px;
+        left: 20px;
+    }
+    #tie{
+        top: 10px;
+        left: 20px;
+    }
+    .dlt-title{
+        top: 10%;
+        left: 30vw;
+    }
+    #dlt{
+        position: absolute;
+        z-index: 100;
+        top: 10%;
+        left: 30vw;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 258px;
+    }
+  }
+  .settings-drop{
+    position: absolute;
+    z-index: 100;
+  } 
+  #menu-tit{
+    font-weight: 600;
+font-size: 10px;
+line-height: 18px;
+}
+.pass{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+.table-popup{
+    background-color: #F7F8F9;
+max-width: 207px;
+padding: 5px;
+border-radius: 10px;
+}
+// .btn-active{
+//     visibility: visible;
+//     opacity: 1;
+// }cardSet
+.settings-drop{
+    background-color: #F7F8F9;
+max-width: 150px;
+padding: 5px;
+border-radius: 10px;
+}
+.cardSet {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .cardSet .triangle {
+    top: -11px;
+    right: 5px;
+  }  
+  .cardSide{
+    .triangle{
+     
+        left: -11% !important;
+        transform: rotate(270deg) !important;
+    }
+  }

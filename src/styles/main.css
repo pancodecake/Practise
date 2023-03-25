@@ -755,8 +755,13 @@ ul {
 }
 
 .arrange-drop {
-  right: -2px;
-  top: 39px;
+ 
+    right: -2px;
+    top: 39px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  
 }
 
 .arrange-drop li {
@@ -1015,14 +1020,14 @@ html {
 .arrange {
   z-index: 100;
   position: absolute;
-  right: 126px;
+  right: 114px;
   top: 1px;
   width: 158px;
 }
 .arrange .triangle {
-  top: 9px;
-  left: 149px;
-  transform: rotate(90deg);
+  top: 6px !important;
+  left: 99% !important;
+  transform: rotate(90deg) !important;
 }
 
 .invite h3 {
@@ -1042,7 +1047,7 @@ html {
 .cover {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 150vh;
   background-color: black;
   opacity: 0.2;
   top: 1px;
@@ -1079,7 +1084,7 @@ html {
 
 .invite {
   top: 106%;
-  right: -16px;
+  right: -16px!important;
   z-index: 100;
 }
 .invite .modal__add {
@@ -1122,13 +1127,13 @@ html {
   margin-right: 1rem;
 }
 
-.cardSet {
+.table .popup {
   position: absolute;
   right: 0px;
   top: 35px;
   z-index: 100;
 }
-.cardSet .triangle {
+.table .popup .triangle {
   top: -11px;
   right: 5px;
 }
@@ -1162,7 +1167,7 @@ html {
 
 .settings-drop {
   position: absolute;
-  left: 129px;
+  left: 113px;
   top: -4px;
   z-index: 100;
 }
@@ -1185,12 +1190,12 @@ html {
 }
 
 .table #move {
-  top: 18px;
-  left: 0px;
+  top: 10px;
+  left: 20px;
 }
 .table #tie {
-  top: 18px;
-  left: 0px;
+  top: 10px;
+  left: 20px;
 }
 .table .dlt-title {
   top: 10%;
@@ -1203,6 +1208,7 @@ html {
   left: 30vw;
   background-color: white;
   border-radius: 10px;
+  max-width: 258px;
 }
 
 .settings-drop {
@@ -1221,15 +1227,43 @@ html {
   opacity: 0;
 }
 
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.table-popup {
+  background-color: #F7F8F9;
+  max-width: 207px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.settings-drop {
+  background-color: #F7F8F9;
+  max-width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 .cardSet {
+  position: absolute;
+  right: 0px;
+  top: 35px;
+  z-index: 100;
   visibility: hidden;
   opacity: 0;
 }
 
-.pop {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
+.cardSet .triangle {
+  top: -11px;
+  right: 5px;
+}
+
+.cardSide .triangle {
+  left: -11% !important;
+  transform: rotate(270deg) !important;
 }
 
 /*# sourceMappingURL=main.css.map */

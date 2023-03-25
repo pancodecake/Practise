@@ -18,6 +18,124 @@
 </head>
 <body>
     <main>
+        <div class="title-password popup Xbtn">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="img/icon-cross.svg" alt="">
+            </button>
+    
+            <div class="modal-add">
+    
+                <div class="modall-add__content">
+                    <div class="modal-add__header">
+                        <div class="modal-add__title">Создать пароль</div>
+                    </div>
+    
+                    <form class="form" action="/" method="post" id="form-password">
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Название<span class="label__star">*</span></label>
+                            <input class="form__input form__input--b" name="input-name" type="text" id="name6">
+                        </div>
+    
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Логин<span class="label__star">*</span></label>
+                            <input class="form__input form__input--b" name="input-name" type="text" id="login">
+                        </div>
+    
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Пароль<span class="label__star">*</span></label>
+                            <div class="text__fuild">
+                                <input class="form__input form__input--b" name="input-name" type="password" id="password">
+                            </div>
+                        </div>
+    
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">URL<span class="label__star">*</span></label>
+                            <input class="form__input form__input--b" name="input-name" type="text" id="url">
+                        </div>
+    
+                        <div class="form__group">
+                            <div class="label__counter">
+                                <div class="form__label-word">
+                                    <label class="form__label" for="input-name">Описание</label>
+                                </div>
+                                <span class="counter" id="char_count5">0/100</span>
+                            </div>
+                            <textarea class="form__textarea form__textarea--c" name="input-text" id="textbox5" maxlength="100"></textarea>
+                        </div>
+    
+                        <div class="form__group">
+                            <label class="form__label" for="input-name">Привязать к категории</label>
+                            <div class="select__wrapper">
+                                <select class="form__select form__select--z" name="select-name">
+                                    <option class="choose">Выберите категорию</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="line line--rt"></div>
+    
+                        <div class="btn">
+                            <button class="btn__a" type="submit">Создать</button>
+                            <button class="btn__b" type="submit" data-close>Отменить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+        <div class="check-con popup but">
+            <div class="modal__add">
+        
+              
+                <div class="modal-add__header modal-add__header--list">
+                    <h3 class="invite-h3">Открыть доступ</h3>
+                </div>
+                    <div class="modal-checkbox">
+                        <div class="modal-checkbox__item" id="checked">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                Олег Козорезов
+                            </label>
+                        </div>
+                        <div class="modal-checkbox__item" id="checked">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                Константин Ткачук
+                            </label>
+                        </div>
+                        <div class="modal-checkbox__item">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                Ольга Рыкова
+                            </label>
+                        </div>
+                        <div class="modal-checkbox__item">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                Дмитрий Коцюбинский
+                            </label>
+                        </div>
+                        <div class="modal-checkbox__item">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                Алексей Осипенко
+                            </label>
+                        </div>
+                    </div>   
+                    <div class="btn">
+                        <button class="btn__a" type="submit">Сохранить</button>
+                        <button class="btn__b" type="submit" data-close>Отменить</button>
+                    </div>
+        
+            </div>
+        </div>
+        <!-- popup -->
         <div class="container">
             <section class="projacc_search">
                 <div class="search">
@@ -68,7 +186,7 @@
                             
                         </div>
                     </div>
-                     
+           
                 </div>
             </section>
             <section data-el="5" class="password_table accardion">
@@ -121,7 +239,7 @@
                                                 </div>
                                                 
                                                 
-     <div id="move" class=" settings-drop side pass ">
+     <div id="move" class=" settings-drop popup-side popup ">
             
         <ul class="menu">
             <li><div class="triangle"></div></li>
@@ -130,7 +248,7 @@
         </ul>
         
         </div>
-        <div id="tie" class=" settings-drop side pass ">
+        <div id="tie" class=" settings-drop popup-side popup ">
             
             <ul class="menu">
                 <li><div class="triangle"></div></li>
@@ -141,7 +259,7 @@
             </ul>
             
             </div>
-                                                <div id="dlt" class="modall-chapter__content pass  ">
+                                                <div id="dlt" class="modall-chapter__content popup  popup-side Xbtn ">
                                                     <div class="modal-chapter__header">
                                                         <div class="modal-add__title  modal-add__title--bg">Вы уверены, что хотите удалить пароль?</div>
                                                     </div>
@@ -152,7 +270,7 @@
                                                     </div>
                                                 </div>
                                             
-                                                <div id="redact" class="table-password modal__dialog--br pass">
+                                                <div id="redact" class="table-password modal__dialog--br popup popup-side Xbtn ">
     
                                                     <button class="modal__close" type="button" data-close>
                                                         <img src="img/icon-cross.svg" alt="">
