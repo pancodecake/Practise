@@ -31,7 +31,7 @@
     
 }
 .cover{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 150vh;
     background-color:black;
@@ -46,12 +46,15 @@
     border-radius: 10px;
     background-color: white;
     z-index: 100;
+
+}
+.popup{
     .form__group {
         margin-bottom: 1.2rem;
         display: flex;
         flex-direction: column;
         margin-right: 1rem;
-      }
+      } 
 }
 .dlt-title{
     position: absolute;
@@ -77,13 +80,13 @@ right:20px;
     }
 }
 .title-password{
-    position: absolute;
+    position: sticky;
     top: 10% ;
     left: 30% ;
     border-radius: 10px;
     background-color: white;
     z-index: 100; 
-  
+  max-width: 400px;
     .form__group{
         display: flex;
         flex-direction: column;
@@ -107,22 +110,27 @@ right:20px;
     }
 }
 .table{
+ 
     .popup{
         position: absolute;
-        right: 0px;
-        top: 35px;
-        z-index: 100;
+  right: 8px;
+  top: 39px;
+  z-index: 100;
         .triangle{
             top: -11px;
             right: 5px;
                 }
     }
+    .Xbtn{
+        position: fixed;
+top: 0px;
+left: 30%;
+    }
 }
 
-.redact-pop{
-    position: absolute;
-    top: 10%;
-    left: 30vw;
+#card-redact{
+   
+   
     border-radius: 10px;
     background-color: white;
     z-index: 100; 
@@ -134,10 +142,17 @@ right:20px;
     }
     
 }
-.dlt-title {
-    position: absolute;
-    top: 10%;
-    left: 30vw;
+#card-move{
+    .menu{
+        .triangle{
+            left: -10%;
+            transform: rotate(270deg) ;
+        }
+    }
+}
+#card-dlt {
+   
+   
     border-radius: 10px;
     background-color: white;
     z-index: 100;
@@ -146,18 +161,18 @@ right:20px;
     align-items: center;
   }
   .settings-drop{
-    position: absolute;
-    left: 129px;
-    top: -4px;
-    z-index: 100;
+  
     .side-link{
         width: 140px;
     }
-    .triangle{
-        top: 8px!important;
-        left: 100%!important;
-        transform: rotate(90deg)!important;
+    .menu{
+        .triangle{
+            top: 8px;
+            left: 100%;
+            transform: rotate(90deg);
+        }
     }
+ 
   }
   .table-password{
     position: absolute;
@@ -171,11 +186,11 @@ right:20px;
   .table{
     #move{
         top:10px;
-        left: 20px;
+        left: 34px;
     }
     #tie{
         top: 10px;
-        left: 20px;
+        left: 34px;
     }
     .dlt-title{
         top: 10%;
@@ -209,7 +224,9 @@ line-height: 18px;
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    z-index: 100;
 }
+
 .table-popup{
     background-color: #F7F8F9;
 max-width: 207px;
@@ -226,6 +243,7 @@ max-width: 150px;
 padding: 5px;
 border-radius: 10px;
 }
+
 .cardSet {
     position: absolute;
     right: 0px;
@@ -245,3 +263,70 @@ border-radius: 10px;
         transform: rotate(270deg) !important;
     }
   }
+  .popcenter{
+    position: fixed;
+
+    top: 98px;
+    left: 39%;
+}
+.popup-side{
+    z-index: 200!important;
+}
+#settings-carry{
+    background-color: #F7F8F9;
+max-width: 207px;
+padding: 5px;
+
+}
+#settings-create{
+    max-width: 287px;
+    background-color: white;
+    border-radius: 10px;
+}
+.settings {
+ path{
+    pointer-events: none;
+ }
+}
+.settingsMenu{
+    right:24px;
+    background-color: #F7F8F9;
+    border-radius: 10px;
+    padding:3.5px 5px;
+    top: 50px;
+    
+    .triangle {
+        top: -10px;
+        left: 85%;
+        transform: rotate(0deg);
+      }
+}
+#title-pass{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.popup{
+    
+}
+.popcenter{
+    background-color: white;
+    border-radius: 10px;
+}
+.btns{
+    svg{
+        pointer-events: none;
+        path{
+            pointer-events: none;
+        }
+    }
+}
+.btns{
+    
+    path{
+        pointer-events: none;
+    }
+}
+
+    

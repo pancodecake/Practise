@@ -233,12 +233,12 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
-  width: 108px;
+ 
   height: 39px;
   align-items: center;
   border-radius: 2px;
   background-color: #2FC6F6;
-  padding: 8px 19px 7px 19px;
+  padding: 11px 13px;
   border: none;
   cursor: pointer;
 }
@@ -261,11 +261,11 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-  width: 108px;
+
   height: 39px;
   align-items: center;
   background: none;
-  padding: 8px 19px 7px 19px;
+  padding: 11px 13px;
   border: none;
   cursor: pointer;
 }
@@ -420,11 +420,11 @@
   position: relative;
   background-color: #FFFFFF;
   transform: scale(1);
-  transition: transform 0.2s linear;
+
   background-color: #F7F8F9;
 position: absolute;
 max-width: 238px;
-right: 500px;
+
 }
 
 
@@ -441,10 +441,9 @@ right: 500px;
 .modal-checkbox{
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  margin-left: 9px;
-  margin-right: 9px;
-  margin-top: 9px;
+  padding-bottom: 18px;
+  margin: 9px 9px 18px 9px;
+  border-bottom: 1px solid rgba(82, 92, 105,0.3);
   
 }
 .check {
@@ -509,10 +508,13 @@ right: 500px;
   
  
 }
-.side-link img {
-  width: 10px;
-  height: 10px;
-}
+.popup{
+  img,svg {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+} 
 .side-link:hover {
   background: #C6EEFC;
 }
@@ -556,11 +558,7 @@ ul {
   position: relative;
 }
 
-.settings .triangle {
-  top: -10px;
-  left: 85%;
-  transform: rotate(0deg);
-}
+
 
 .settings-drop .triangle {
   top: 5px;

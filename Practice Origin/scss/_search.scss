@@ -1,9 +1,12 @@
 @use  "./help" as * ;
+.acc_search{
+  position: relative;
+}
 .search{
     background: #ffffff;
     border-radius: 10px;
     padding: 0 21px 17px 26px;
-  
+    
     .search-con div:nth-child(2){
       margin-right: 162px;
     }

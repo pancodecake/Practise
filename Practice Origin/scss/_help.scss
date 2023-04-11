@@ -40,7 +40,7 @@ $color-blue-light: #C6EEFC;
 .container{
     max-width: 1920px;
     margin: 0 auto;
-    min-width: 991px;
+
    
     
 }
@@ -51,6 +51,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  overflow-x: hidden;
 }
 
 
@@ -159,9 +160,7 @@ color: white;
   transform: rotate(360deg);
 
 }
-.settings{
-  margin-left: 23px;
-}
+
 .pop > * {
   transition: 0.5s opacity ease-in, 0.5s height ease-in-out;
 }

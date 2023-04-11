@@ -32,6 +32,7 @@ position: relative;
       color: $gray;
 
 h4{
+  white-space: nowrap;
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
@@ -79,11 +80,13 @@ line-height: 15px;
     }
   }
   .history_table{
+    max-width: 100%;
     .table-head{
+      display: block;
       div{
         display: grid;
         grid-template-columns: repeat(3,190px);
-        grid-column-gap: 27vw;
+        grid-column-gap: 30%;
       }
     
      
@@ -94,7 +97,7 @@ line-height: 15px;
       div{
         display: grid;
         grid-template-columns: repeat(3,190px);
-        grid-column-gap: 27vw;
+        grid-column-gap: 30%;
       }
       
     }
