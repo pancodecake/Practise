@@ -19,7 +19,11 @@ const clean = () => {
 
 
 const styles = (done) => {
-    src('src/styles/**/*.css')//get all ending with css in styles
+    src([
+        'src/styles/norm.css',
+        'src/styles/main.css',
+  
+      ])//get all ending with css in styles
     .pipe(srcmaps.init())
     .pipe(concat('main.css'))//in main css
     .pipe(autoprefixes({

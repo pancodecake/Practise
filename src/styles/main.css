@@ -23,7 +23,6 @@
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  min-width: 991px;
 }
 
 body {
@@ -32,6 +31,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -136,10 +136,6 @@ svg:active {
 
 .settings:active {
   transform: rotate(360deg);
-}
-
-.settings {
-  margin-left: 23px;
 }
 
 .pop > * {
@@ -404,12 +400,11 @@ svg:active {
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
-  width: 108px;
   height: 39px;
   align-items: center;
   border-radius: 2px;
   background-color: #2FC6F6;
-  padding: 8px 19px 7px 19px;
+  padding: 11px 13px;
   border: none;
   cursor: pointer;
 }
@@ -436,11 +431,10 @@ svg:active {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-  width: 108px;
   height: 39px;
   align-items: center;
   background: none;
-  padding: 8px 19px 7px 19px;
+  padding: 11px 13px;
   border: none;
   cursor: pointer;
 }
@@ -602,11 +596,9 @@ svg:active {
   position: relative;
   background-color: #FFFFFF;
   transform: scale(1);
-  transition: transform 0.2s linear;
   background-color: #F7F8F9;
   position: absolute;
   max-width: 238px;
-  right: 500px;
 }
 
 .modal-checkbox__item {
@@ -622,10 +614,9 @@ svg:active {
 .modal-checkbox {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  margin-left: 9px;
-  margin-right: 9px;
-  margin-top: 9px;
+  padding-bottom: 18px;
+  margin: 9px 9px 18px 9px;
+  border-bottom: 1px solid rgba(82, 92, 105, 0.3);
 }
 
 .check {
@@ -688,9 +679,10 @@ svg:active {
   position: relative;
 }
 
-.side-link img {
+.popup img, .popup svg {
   width: 10px;
   height: 10px;
+  margin-right: 10px;
 }
 
 .side-link:hover {
@@ -736,12 +728,6 @@ ul {
   position: relative;
 }
 
-.settings .triangle {
-  top: -10px;
-  left: 85%;
-  transform: rotate(0deg);
-}
-
 .settings-drop .triangle {
   top: 5px;
   left: -15px;
@@ -755,13 +741,8 @@ ul {
 }
 
 .arrange-drop {
- 
-    right: -2px;
-    top: 39px;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-  
+  right: -2px;
+  top: 39px;
 }
 
 .arrange-drop li {
@@ -816,6 +797,7 @@ html {
   color: #848B94;
 }
 .table-head h4 {
+  white-space: nowrap;
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
@@ -858,15 +840,25 @@ html {
   transform: rotate(180deg);
 }
 
+.history_table {
+  max-width: 100%;
+}
+.history_table .table-head {
+  display: block;
+}
 .history_table .table-head div {
   display: grid;
   grid-template-columns: repeat(3, 190px);
-  grid-column-gap: 27vw;
+  grid-column-gap: 30%;
 }
 .history_table .table-row div {
   display: grid;
   grid-template-columns: repeat(3, 190px);
-  grid-column-gap: 27vw;
+  grid-column-gap: 30%;
+}
+
+.acc_search {
+  position: relative;
 }
 
 .search {
@@ -1020,14 +1012,14 @@ html {
 .arrange {
   z-index: 100;
   position: absolute;
-  right: 114px;
+  right: 126px;
   top: 1px;
   width: 158px;
 }
 .arrange .triangle {
-  top: 6px !important;
-  left: 99% !important;
-  transform: rotate(90deg) !important;
+  top: 9px;
+  left: 149px;
+  transform: rotate(90deg);
 }
 
 .invite h3 {
@@ -1045,7 +1037,7 @@ html {
 }
 
 .cover {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150vh;
   background-color: black;
@@ -1062,7 +1054,8 @@ html {
   background-color: white;
   z-index: 100;
 }
-.modal-title .form__group {
+
+.popup .form__group {
   margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -1084,7 +1077,7 @@ html {
 
 .invite {
   top: 106%;
-  right: -16px!important;
+  right: -16px;
   z-index: 100;
 }
 .invite .modal__add {
@@ -1096,12 +1089,13 @@ html {
 }
 
 .title-password {
-  position: absolute;
+  position: sticky;
   top: 10%;
   left: 30%;
   border-radius: 10px;
   background-color: white;
   z-index: 100;
+  max-width: 400px;
 }
 .title-password .form__group {
   display: flex;
@@ -1129,34 +1123,38 @@ html {
 
 .table .popup {
   position: absolute;
-  right: 0px;
-  top: 35px;
+  right: 8px;
+  top: 39px;
   z-index: 100;
 }
 .table .popup .triangle {
   top: -11px;
   right: 5px;
 }
+.table .Xbtn {
+  position: fixed;
+  top: 0px;
+  left: 30%;
+}
 
-.redact-pop {
-  position: absolute;
-  top: 10%;
-  left: 30vw;
+#card-redact {
   border-radius: 10px;
   background-color: white;
   z-index: 100;
   max-width: 540px;
 }
-.redact-pop .form__group {
+#card-redact .form__group {
   display: flex;
   flex-direction: column;
   margin-right: 1rem;
 }
 
-.dlt-title {
-  position: absolute;
-  top: 10%;
-  left: 30vw;
+#card-move .menu .triangle {
+  left: -10%;
+  transform: rotate(270deg);
+}
+
+#card-dlt {
   border-radius: 10px;
   background-color: white;
   z-index: 100;
@@ -1165,19 +1163,13 @@ html {
   align-items: center;
 }
 
-.settings-drop {
-  position: absolute;
-  left: 113px;
-  top: -4px;
-  z-index: 100;
-}
 .settings-drop .side-link {
   width: 140px;
 }
-.settings-drop .triangle {
-  top: 8px !important;
-  left: 100% !important;
-  transform: rotate(90deg) !important;
+.settings-drop .menu .triangle {
+  top: 8px;
+  left: 100%;
+  transform: rotate(90deg);
 }
 
 .table-password {
@@ -1191,11 +1183,11 @@ html {
 
 .table #move {
   top: 10px;
-  left: 20px;
+  left: 34px;
 }
 .table #tie {
   top: 10px;
-  left: 20px;
+  left: 34px;
 }
 .table .dlt-title {
   top: 10%;
@@ -1231,6 +1223,7 @@ html {
   visibility: hidden;
   opacity: 0;
   position: absolute;
+  z-index: 100;
 }
 
 .table-popup {
@@ -1264,6 +1257,68 @@ html {
 .cardSide .triangle {
   left: -11% !important;
   transform: rotate(270deg) !important;
+}
+
+.popcenter {
+  position: fixed;
+  top: 98px;
+  left: 39%;
+}
+
+.popup-side {
+  z-index: 200 !important;
+}
+
+#settings-carry {
+  background-color: #F7F8F9;
+  max-width: 207px;
+  padding: 5px;
+}
+
+#settings-create {
+  max-width: 287px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.settings path {
+  pointer-events: none;
+}
+
+.settingsMenu {
+  right: 24px;
+  background-color: #F7F8F9;
+  border-radius: 10px;
+  padding: 3.5px 5px;
+  top: 50px;
+}
+.settingsMenu .triangle {
+  top: -10px;
+  left: 85%;
+  transform: rotate(0deg);
+}
+
+#title-pass {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popcenter {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btns svg {
+  pointer-events: none;
+}
+.btns svg path {
+  pointer-events: none;
+}
+
+.btns path {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */
